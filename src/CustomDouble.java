@@ -46,38 +46,17 @@ public class CustomDouble {
     public CustomDouble subtract (final double second) {
         return this.subtract(new CustomDouble(second));
     }
-    public CustomDouble multiply (final CustomDouble second) {
-        final double result =  integerNumber * second.integerNumber + integerNumber * second.doubleNumber + doubleNumber * second.integerNumber + doubleNumber * second.doubleNumber;
-        return new CustomDouble(result);
-    }
-    public CustomDouble multiply (final double second) {
-        return this.multiply(new CustomDouble(second));
-    }
-    public CustomDouble divide(final CustomDouble second) {
-        if (second.equals(new CustomDouble(0,0))) {
-            return new CustomDouble(0,0);
-        }
-        final double result = this.toDouble() / second.toDouble();
-        return new CustomDouble(result);
-    }
-
-    public CustomDouble divide(final double second) {
-        if (second == 0) {
-            return new CustomDouble(0,0);
-        }
-        return this.divide(new CustomDouble(second));
-    }
 
     public void compare (final CustomDouble second) {
         final double result = this.toDouble() - second.toDouble();
         if (result == 0) {
-            System.out.println("Перше число рівне другому");
+            System.out.println("The first number is equal to the second");
         }
         else if (result > 0) {
-            System.out.println("Перше число більше ніж друге");
+            System.out.println("The first number is greater than the second");
         }
         else {
-            System.out.println("Друге число більше ніж перше");
+            System.out.println("The second number is greater than the first");
         }
     }
 

@@ -12,12 +12,12 @@ public class Task1 {
 
     public static String sortByO(final String string){
 
-        final String[] masiv = string.split(" ");// split - розділяє на окремі слова
+        final String[] string1 = string.split(" ");// split - розділяє на окремі слова
 
         final Comparator<String> comp = Comparator.comparing(word -> countO(word));//передає цифри (кількість букв)і порівнюються слова і за дефолтом розставляє від меншогомдо більшого
-        Arrays.sort(masiv, comp.reversed());
+        Arrays.sort(string1, comp.reversed());
 
-        return Arrays.toString(masiv);
+        return Arrays.toString(string1);
     }
 
     private static int countO (final String word){
