@@ -1,5 +1,5 @@
 public class Task9 {
-    private static int operator;
+
 
     public static void main(final String[] args) {
         final CustomDouble numberOne = new CustomDouble(2, 0.2);
@@ -10,7 +10,7 @@ public class Task9 {
 
     }
 
-    private static void operations(final CustomDouble numberOne, final CustomDouble numberTwo, final char c) {
+    private static void operations(final CustomDouble numberOne, final CustomDouble numberTwo, final char operator) {
         switch (operator) {
             case '*' ->
                     System.out.println(numberOne + " * " + numberTwo + " = " + Calculator.multiply(numberOne, numberTwo));
