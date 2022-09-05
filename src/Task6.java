@@ -1,4 +1,4 @@
-public class Task_6  {
+public class Task6 {
     public static void main(final String[] args) {
         final User userNumberOne = new User("Andriy", "Perun", 26, "andriy.perun@gmail.com");
         final User userNumberTwo = new User ("Uliana", "Perun", 18, "uliana.perun@gmail.com");

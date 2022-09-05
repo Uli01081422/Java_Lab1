@@ -1,8 +1,8 @@
 import java.util.Objects;
 
 public class Porch {
-    private int numberofArchway;
-    private int numberofRadiators;
+    private int numberOfArchway;
+    private int numberOfRadiators;
     private int furniture;
     private int wooden_utensils;
     private int flower_pots;
@@ -10,9 +10,9 @@ public class Porch {
     private TypePorch typePorch;
 
 
-    public Porch(final int numberofArchway, final int numberofRadiators, final int furniture, final int wooden_utensils, final int flower_pots, final String color, final TypePorch typePorch) {
-        this.numberofArchway = numberofArchway;
-        this.numberofRadiators = numberofRadiators;
+    public Porch( final int furniture, final int wooden_utensils, final int flower_pots, final String color, final TypePorch typePorch) {
+        this.numberOfArchway = numberOfArchway;
+        this.numberOfRadiators = numberOfRadiators;
         this.furniture = furniture;
         this.wooden_utensils = wooden_utensils;
         this.flower_pots = flower_pots;
@@ -28,20 +28,20 @@ public class Porch {
         this.color = color;
     }
 
-    public int getNumberofArchway() {
-        return numberofArchway;
+    public int getNumberOfArchway() {
+        return numberOfArchway;
     }
 
-    public void setNumberofArchway(final int numberofArchway) {
-        this.numberofArchway = numberofArchway;
+    public void setNumberOfArchway(final int numberOfArchway) {
+        this.numberOfArchway = numberOfArchway;
     }
 
-    public int getNumberofRadiators() {
-        return numberofRadiators;
+    public int getNumberOfRadiators() {
+        return numberOfRadiators;
     }
 
-    public void setNumberofRadiators(final int numberofRadiators) {
-        this.numberofRadiators = numberofRadiators;
+    public void setNumberOfRadiators(final int numberOfRadiators) {
+        this.numberOfRadiators = numberOfRadiators;
     }
 
     public int getFurniture() {
@@ -78,7 +78,7 @@ public class Porch {
 
 
 
-    public void layoutfurniture() {
+    public void layoutFurniture() {
         wooden_utensils++;
     }
 
@@ -86,35 +86,35 @@ public class Porch {
         wooden_utensils++;
     }
 
-    public void layoutflower_pots() {
+    public void layoutFlower_pots() {
         flower_pots++;
     }
 
-    public void  buildrchway() {
-        numberofArchway++;
+    public void  buildArchway() {
+        numberOfArchway++;
     }
 
     public void installationRadiators() {
-        numberofRadiators++;
+        numberOfRadiators++;
     }
 
     @Override
     public boolean equals(final Object o) {
         if (this == o) return true;
         if (!(o instanceof Porch porch)) return false;
-        return numberofArchway == porch.numberofArchway && numberofRadiators == porch.numberofRadiators && furniture == porch.furniture && wooden_utensils == porch.wooden_utensils && flower_pots == porch.flower_pots && color.equals(porch.color) && typePorch == porch.typePorch;
+        return numberOfArchway == porch.numberOfArchway && numberOfRadiators == porch.numberOfRadiators && furniture == porch.furniture && wooden_utensils == porch.wooden_utensils && flower_pots == porch.flower_pots && Objects.equals(color, porch.color) && typePorch == porch.typePorch;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numberofArchway, numberofRadiators, furniture, wooden_utensils, flower_pots, color, typePorch);
+        return Objects.hash(numberOfArchway, numberOfRadiators, furniture, wooden_utensils, flower_pots, color, typePorch);
     }
 
     @Override
     public String toString() {
         return "Porch{" +
-                "numberofArchway=" + numberofArchway +
-                ", numberofRadiators=" + numberofRadiators +
+                "numberOfArchway=" + numberOfArchway +
+                ", numberOfRadiators=" + numberOfRadiators +
                 ", furniture=" + furniture +
                 ", wooden_utensils=" + wooden_utensils +
                 ", flower_pots=" + flower_pots +

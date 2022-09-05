@@ -2,36 +2,33 @@ import java.util.*;
 
 public class Task1 {
     public static void main(final String[] args) {
-        final String string   = "omo om ooo mnk";
-        System.out.println("String Before = \" " + string + "\"" );
+        final String string = "omo om ooo mnk";
+        final char c = 'o';
+        System.out.println("String Before = \" " + string + "\"");
 
-        final String out = sortByO(string);
+        final String out = sortByChar(string, c);
         System.out.println("String After = \" " + out + "\"");
 
     }
 
-    public static String sortByO(final String string){
+    public static String sortByChar(final String string, final char c) {
+        final String[] string1 = string.split(" ");
 
-        final String[] string1 = string.split(" ");// split - розділяє на окремі слова
-
-        final Comparator<String> comp = Comparator.comparing(word -> countO(word));//передає цифри (кількість букв)і порівнюються слова і за дефолтом розставляє від меншогомдо більшого
+        final Comparator<String> comp = Comparator.comparing(word -> countChar(word, c));
         Arrays.sort(string1, comp.reversed());
 
         return Arrays.toString(string1);
     }
 
-    private static int countO (final String word){
-        final char oChar = 'o';
+    private static int countChar(final String word, final char c) {
         int countLatter = 0;
 
-        for ( int i = 0; i < word.length(); i++)
-        {
-            if (word.charAt(i) == oChar )
-            {
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == c) {
                 countLatter++;
             }
         }
-        return  countLatter;
+        return countLatter;
     }
 
 

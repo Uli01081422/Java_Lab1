@@ -2,43 +2,43 @@ import java.util.Objects;
 
 public class Room {
     private TypeRoom typeRoom;
-    private int numberofDoors;
-    private int numberofWindows;
-    private int numberofRadiators;
+    private int numberOfDoors;
+    private int numberOfWindows;
+    private int numberOfRadiators;
     private String color;
     private double size;
 
-    public Room(final TypeRoom typeRoom, final int numberofDoors, final int numberofWindows, final int numberofradiators, final String color, final double size) {
+    public Room(final TypeRoom typeRoom, final int numberOfDoors, final int numberOfWindows, final int numberOfradiators, final String color, final double size) {
         this.typeRoom = typeRoom;
-        this.numberofDoors = numberofDoors;
-        this.numberofWindows = numberofWindows;
-        this.numberofRadiators = numberofradiators;
+        this.numberOfDoors = numberOfDoors;
+        this.numberOfWindows = numberOfWindows;
+        this.numberOfRadiators = numberOfradiators;
         this.color = color;
         this.size = size;
     }
 
-    public int getNumberofDoors() {
-        return numberofDoors;
+    public int getNumberOfDoors() {
+        return numberOfDoors;
     }
 
-    public void setNumberofDoors(final int numberofDoors) {
-        this.numberofDoors = numberofDoors;
+    public void setNumberOfDoors(final int numberOfDoors) {
+        this.numberOfDoors = numberOfDoors;
     }
 
-    public int getNumberofWindows() {
-        return numberofWindows;
+    public int getNumberOfWindows() {
+        return numberOfWindows;
     }
 
-    public void setNumberofWindows(final int numberofWindows) {
-        this.numberofWindows = numberofWindows;
+    public void setNumberOfWindows(final int numberOfWindows) {
+        this.numberOfWindows = numberOfWindows;
     }
 
-    public int getNumberofRadiators() {
-        return numberofRadiators;
+    public int getNumberOfRadiators() {
+        return numberOfRadiators;
     }
 
-    public void setNumberofRadiators(final int numberofradiators) {
-        this.numberofRadiators = numberofradiators;
+    public void setNumberOfRadiators(final int numberOfRadiators) {
+        this.numberOfRadiators = numberOfRadiators;
     }
 
     public String getColor() {
@@ -58,41 +58,40 @@ public class Room {
     }
 
 
-
     @Override
     public boolean equals(final Object o) {
         if (this == o) return true;
         if (!(o instanceof Room room)) return false;
-        return numberofDoors == room.numberofDoors && numberofWindows == room.numberofWindows && numberofRadiators == room.numberofRadiators && Double.compare(room.size, size) == 0 && color.equals(room.color);
+        return numberOfDoors == room.numberOfDoors && numberOfWindows == room.numberOfWindows && numberOfRadiators == room.numberOfRadiators && Double.compare(room.size, size) == 0 && typeRoom == room.typeRoom && Objects.equals(color, room.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numberofDoors, numberofWindows, numberofRadiators, color, size);
+        return Objects.hash(typeRoom, numberOfDoors, numberOfWindows, numberOfRadiators, color, size);
     }
 
     @Override
     public String toString() {
         return "Room{" +
                 "typeRoom=" + typeRoom +
-                ", numberofDoors=" + numberofDoors +
-                ", numberofWindows=" + numberofWindows +
-                ", numberofRadiators=" + numberofRadiators +
+                ", numberOfDoors=" + numberOfDoors +
+                ", numberOfWindows=" + numberOfWindows +
+                ", numberOfRadiators=" + numberOfRadiators +
                 ", color='" + color + '\'' +
                 ", size=" + size +
                 '}';
     }
 
     public void installationWindow() {
-        numberofWindows++;
+        numberOfWindows++;
     }
 
     public void installationDoor() {
-        numberofDoors++;
+        numberOfDoors++;
     }
 
     public void installationRadiators() {
-        numberofRadiators++;
+        numberOfRadiators++;
     }
     public void puttyRoom(final String color) {
         setColor(color);
